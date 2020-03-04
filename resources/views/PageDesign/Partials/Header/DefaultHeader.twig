@@ -1,4 +1,8 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+{% set companyLogo  = config("Ceres.header.company_logo") %}
+{% set companyName  = trans("Ceres::Template.headerCompanyName") %}
+{% set showHeaderNavBar = config("Ceres.header.show_navbars") %}
+
 
 <header id="page-header" class="top-bar header-fw fixed-top">
     <div>
