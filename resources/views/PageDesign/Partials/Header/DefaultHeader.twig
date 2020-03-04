@@ -7,6 +7,19 @@
                 {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
 
                 <ul id="controlsList" class="controls-list list-inline">
+                
+                <li class="list-inline-item brand">
+                          <a class="navbar-brand" href="{{ homepageURL }}">
+                              {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
+                                  <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
+                              {% else %}
+                                  <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
+                              {% endif %}
+                          </a>
+                </li>
+                
+                
+                
                     <li class="list-inline-item control-user">
                         <user-login-handler>
                             <a data-toggle="modal">
