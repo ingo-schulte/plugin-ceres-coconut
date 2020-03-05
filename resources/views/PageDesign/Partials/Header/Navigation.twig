@@ -1,1 +1,18 @@
 <!-- Insert markup for navigation here -->
+
+{% set showHeaderNavBar = config("Ceres.header.show_navbars") %}
+{% set useMegaMenu  = config("Ceres.header.megamenu_levels") > 1 %}
+
+<nav class="navbar header-fw{% if useMegaMenu %} megamenu{%endif%}">
+    <div class="container-max">
+        <div class="row mx-0">
+
+            <div id="mainNavbarCollapsable" class="d-none d-lg-block">
+                {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
+                    {% include "Ceres::PageDesign.Partials.Header.NavigationList" %}
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</nav>
