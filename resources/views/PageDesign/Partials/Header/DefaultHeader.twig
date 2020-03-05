@@ -4,10 +4,8 @@
 {% set companyName  = trans("Ceres::Template.headerCompanyName") %}
 
 <header id="page-header" class="top-bar header-fw fixed-top">
-    <div>
-        <div class="container-max">
-            <div class="row mx-0">
-            
+    <div class="container-max">
+        <div class="row mx-0">
             <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
                 <a class="navbar-brand" href="{{ homepageURL }}">
                     {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
@@ -16,14 +14,7 @@
                         <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
                     {% endif %}
                 </a>
-
-                <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler d-lg-none" type="button">
-                    &#9776;
-                </button>
             </div>
-            
-                {{ LayoutContainer.show("Ceres::Header.LeftSide") }}
-
                 <ul id="controlsList" class="controls-list list-inline">
                     <li class="list-inline-item control-user">
                         <user-login-handler>
@@ -38,7 +29,6 @@
                             </a>
                         </user-login-handler>
                     </li>
-
                     {% if services.url.isRouteEnabled("wish-list") %}
                         <li class="list-inline-item control-wish-list">
                             <wish-list-count>
@@ -67,9 +57,7 @@
                         {% endif %}
                     </li>
                 </ul>
-            </div>
         </div>
-        {% include "Ceres::PageDesign.Partials.Header.Navigation" %}
     </div>
 </header>
 
