@@ -65,7 +65,7 @@
         <div class="row">
             <hr class="my-4">
             {% for i in 1..numberOfCols %}
-                <div class="col-6 col-sm-3 col-lg-2">
+                <div class="col-3">
                     <nav class="footer-column mb-4">
                         <h2 class="h5">{{ trans('Ceres::Template.footerColumnTitle' ~ i) }}</h2>
                         <ul class="list-unstyled">
@@ -89,12 +89,7 @@
                     </nav>
                 </div>
             {% endfor %}
-            <hr class="d-sm-none my-4">
-            <div class="col-6 col-sm-3">
-                <div class="footer-column">
-                    {{ LayoutContainer.show("Ceres::Footer.RowOne") }}
-                </div>
-            </div>
+
             <div class="col-12 col-sm-3">
                 <div class="footer-column row">
                     {% set rowTwo = LayoutContainer.show("Ceres::Footer.RowTwo") %}
