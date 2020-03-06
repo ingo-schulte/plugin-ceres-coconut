@@ -1,6 +1,6 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
-{% set numberOfCols = config('Ceres.footer.number_of_cols') %}
+{% set numberOfCols = config('4') %}
 {% set colSize = (12 / (numberOfCols + 1)) %}
 {% set displayedCategories = [] %}
 {% set numberOfFeatures = config('Ceres.footer.number_of_features') %}
@@ -64,8 +64,8 @@
         
         <div class="row">
             <hr class="my-4">
-            {% for i in 1..4 %}
-                <div class="col-3 col-sm-3 col-lg-2">
+            {% for i in 1..numberOfCols %}
+                <div class="col-6 col-sm-3 col-lg-2">
                     <nav class="footer-column mb-4">
                         <h2 class="h5">{{ trans('Ceres::Template.footerColumnTitle' ~ i) }}</h2>
                         <ul class="list-unstyled">
