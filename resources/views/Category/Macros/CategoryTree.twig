@@ -52,7 +52,12 @@
             {% if category.children and translatedChildren > 0 %}
 
                 <li class="ddown" v-navigation-touch-handler>
-                    <i class="fa fa-navicon" aria-hidden="true"></i><a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">{{ category.details[0].name }}</a>
+                    <a href="{{ currentScopeUrl }}{{ urls.trailingSlashSuffix }}">
+                    
+                    <i class="fa fa-navicon" aria-hidden="true"></i>
+                    {{ category.details[0].name }}
+                    
+                    </a>
 
                     <span class="d-lg-none nav-direction" data-toggle="collapse" href="#navDropdown{{ counter }}" aria-expanded="false">
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
