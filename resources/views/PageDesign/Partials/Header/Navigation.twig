@@ -9,7 +9,7 @@
 
             <div id="mainNavbarCollapsable" class="d-none d-lg-block">
                 {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
-                    {% include "Ceres::PageDesign.Partials.Header.NavigationList" %}
+                   <i area-hidden="true" class=" fa fa-mobile"></i> {% include "Ceres::PageDesign.Partials.Header.NavigationList" %}
                 {% endif %}
             </div>
             
