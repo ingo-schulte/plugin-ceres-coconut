@@ -1,9 +1,9 @@
 <!-- Insert markup for navigation list here -->
 
-{% import "Ceres::Category.Macros.CategoryTree" as Tree %}
+{% import "CeresCoconut::Category.Macros.CategoryTree" as Tree %}
 
 
-<ul class="mainmenu"><i class="fa fa-navicon" aria-hidden="true"></i>
+<ul class="mainmenu">
     {{ Tree.get_nav_bar(
         categories,
         "",
