@@ -6,6 +6,10 @@
 <nav class="navbar header-fw{% if useMegaMenu %} megamenu{%endif%}">
     <div class="container-max">
         <div class="row mx-0">
+        
+            <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler d-lg-none" type="button">
+                    &#9776;
+            </button>
 
             <div id="mainNavbarCollapsable" class="d-none d-lg-block">
                 {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
