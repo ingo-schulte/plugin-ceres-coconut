@@ -1,16 +1,5 @@
 <!-- Insert markup here -->
 
-{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
-
-{% set numberOfCols = config('Ceres.footer.number_of_cols') %}
-{% set colSize = (12 / (numberOfCols + 1)) %}
-{% set displayedCategories = [] %}
-{% set numberOfFeatures = config('Ceres.footer.number_of_features') %}
-{% set topButtonPosition = config('Ceres.footer.to_top_button') %}
-
-{% set footerContainer = LayoutContainer.show("Ceres::Footer") | trim %}
-{% if footerContainer is empty %}
-
 <footer class="bg-dark py-5">
         <div class="container">
           <div class="row">
