@@ -24,9 +24,16 @@
                             <a href="#two" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">Useful Links</a>
                             <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">Useful Links</div>
                             <div class="collapse text-white d-lg-flex" id="two" data-parent="#accordion">
+                            {% autoescape false %}
                                 <ul class="list-unstyled">
-                                <li><a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a></li>
+                                    <li><a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a></li>
+                                    <li><a href="{{ config('Ceres.footer.cancellation_pdf_path') }}" target="_blank">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a></li>
+                                    <li><a href="{{ urls.privacyPolicy }}">{{ trans("Ceres::Template.footerPrivacyPolicy", {"hyphen": "&shy;"}) }}</a></li>
+                                    <li><a href="{{ urls.gtc }}">{{ trans("Ceres::Template.footerGtc") }}</a></li>
+                                    <li><a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a></li>
+                                    <li><a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a></li>
                                 </ul>
+                            {% endautoescape %}
                             </div>
                         </div>
 
