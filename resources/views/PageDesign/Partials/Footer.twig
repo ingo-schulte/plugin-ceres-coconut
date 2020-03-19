@@ -1,4 +1,4 @@
-<!-- Insert markup here -->
+{% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
 
 <footer class="bg-dark py-5">
     <div class="container-max">
@@ -11,18 +11,35 @@
                           <a href="#one" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">SERVICE & SUPPORT</a>
                           <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">SERVICE & SUPPORT</div>
                            <div class="collapse text-white d-lg-flex" id="one" data-parent="#accordion">
+                           {% autoescape false %}
                             <ul class="list-unstyled">
                               <li><i aria-hidden="true" class="fa fa-phone fa-flip-horizontal"></i><span class="service-phone">Per Telefon: <br>07422 - 52400 (Ortstarif)</span></li>
                               <li><i aria-hidden="true" class="fa fa-envelope"></i><span class="service-mail">Per E-Mail:<br></span></li>
                               <li><i aria-hidden="true" class="fa fa-clock"></i><span class="service-hours">Bürozeiten:<br> Mo. - Fr. 10.00 - 16.00 Uhr</span></li>
                             </ul>
+                           {% endautoescape %}
                            </div>
                         </div>
                         
-                        {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
                         <div class="col-lg-3 col-md-12">
-                            <a href="#two" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">Useful Links</a>
-                            <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">Useful Links</div>
+                            <a href="#three" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">KUNDENSERVICE/a>
+                            <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">KUNDENSERVICE</div>
+                            <div class="collapse text-white d-lg-flex" id="three" data-parent="#accordion">
+                            {% autoescape false %}
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="nav-link p-0 text-white">Menu1</a></li>
+                                    <li><a href="#" class="nav-link p-0 text-white">Menu2</a></li>
+                                    <li><a href="#" class="nav-link p-0 text-white">Menu3</a></li>
+                                    <li><a href="#" class="nav-link p-0 text-white">Menu4</a></li>
+                                    <li><a href="#" class="nav-link p-0 text-white">Menu5</a></li>
+                                </ul>
+                            {% endautoescape %}
+                            </div>
+                        </div>                        
+                        
+                        <div class="col-lg-3 col-md-12">
+                            <a href="#two" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">INFORMATIONEN</a>
+                            <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">INFORMATIONEN</div>
                             <div class="collapse text-white d-lg-flex" id="two" data-parent="#accordion">
                             {% autoescape false %}
                                 <ul class="list-unstyled">
@@ -38,23 +55,10 @@
                         </div>
 
                         <div class="col-lg-3 col-md-12">
-                            <a href="#three" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">Useful Links</a>
-                            <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">Useful Links</div>
-                            <div class="collapse text-white d-lg-flex" id="three" data-parent="#accordion">
-                                <ul class="list-unstyled">
-                                    <li><a href="#" class="nav-link p-0 text-white">Menu1</a></li>
-                                    <li><a href="#" class="nav-link p-0 text-white">Menu2</a></li>
-                                    <li><a href="#" class="nav-link p-0 text-white">Menu3</a></li>
-                                    <li><a href="#" class="nav-link p-0 text-white">Menu4</a></li>
-                                    <li><a href="#" class="nav-link p-0 text-white">Menu5</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-12">
                             <a href="#four" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">Useful Links</a>
                             <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">Useful Links</div>
                             <div class="collapse text-white d-lg-flex" id="four" data-parent="#accordion">
+                            {% autoescape false %}
                                 <ul class="list-unstyled">
                                     <li><a href="#" class="nav-link p-0 text-white">Menu1</a></li>
                                     <li><a href="#" class="nav-link p-0 text-white">Menu2</a></li>
@@ -62,6 +66,7 @@
                                     <li><a href="#" class="nav-link p-0 text-white">Menu4</a></li>
                                     <li><a href="#" class="nav-link p-0 text-white">Menu5</a></li>
                                 </ul>
+                            {% endautoescape %}
                             </div>
                         </div>
 
