@@ -14,7 +14,7 @@
                            {% autoescape false %}
                             <ul class="list-unstyled">
                               <li><i aria-hidden="true" class="fa fa-phone fa-flip-horizontal"></i><span class="service-phone">Per Telefon: <br>07422 - 52400 (Ortstarif)</span></li>
-                              <li><i aria-hidden="true" class="fa fa-envelope"></i><span class="service-mail">Per E-Mail:<br></span></li>
+                              <li><i aria-hidden="true" class="fa fa-envelope"></i><span class="service-mail">Per E-Mail:<br><a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a></span></li>
                               <li><i aria-hidden="true" class="fa fa-clock"></i><span class="service-hours">Bürozeiten:<br> Mo. - Fr. 10.00 - 16.00 Uhr</span></li>
                             </ul>
                            {% endautoescape %}
@@ -22,7 +22,7 @@
                         </div>
                         
                         <div class="col-lg-3 col-md-12">
-                            <a href="#three" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">KUNDENSERVICE/a>
+                            <a href="#three" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">KUNDENSERVICE</a>
                             <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">KUNDENSERVICE</div>
                             <div class="collapse text-white d-lg-flex" id="three" data-parent="#accordion">
                             {% autoescape false %}
