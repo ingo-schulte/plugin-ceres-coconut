@@ -13,9 +13,9 @@
                            <div class="collapse text-white d-lg-flex" id="one" data-parent="#accordion">
                            {% autoescape false %}
                             <ul class="list-unstyled">
-                              <li><i aria-hidden="true" class="icon--phone"></i><span class="service-phone">Per Telefon: <br>07422 - 52400 (Ortstarif)</span></li>
-                              <li><i aria-hidden="true" class="icon--mail"></i><span class="service-mail">Per E-Mail:<br><a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}-Formular</a></span></li>
-                              <li><i aria-hidden="true" class="icon--clock"></i><span class="service-hours-1">Bürozeiten:<br> Mo. - Fr. 10.00 - 12.00 Uhr<br><span class="service-hours-2">14.00 - 16.00 Uhr</span></span></li>
+                              <li><i aria-hidden="true" class="icon--phone"></i><span class="service-phone">Per Telefon: <br />07422 - 52400 (Ortstarif)</span></li>
+                              <li><i aria-hidden="true" class="icon--mail"></i><span class="service-mail">Per E-Mail:<br /><a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}-Formular</a></span></li>
+                              <li><i aria-hidden="true" class="icon--clock"></i><span class="service-hours-1">Bürozeiten:<br /> Mo. - Fr. 10.00 - 12.00 Uhr<br /><span class="service-hours-2">14.00 - 16.00 Uhr</span></span></li>
                             </ul>
                            {% endautoescape %}
                            </div>
@@ -58,8 +58,10 @@
                             <a href="#four" data-toggle="collapse" class="h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">Versndpartner</a>
                             <div class="h5 text-uppercase text-white p-0 d-none d-lg-block d-xl-block">Versandpartner</div>
                             <div class="collapse text-white d-lg-flex" id="four" data-parent="#accordion">
-                                    <p><i aria-hidden="true" class="icon--dhl" alt="DHL"></i></p><br>
-                                    <p><i aria-hidden="true" class="icon--deutsche-post" alt="Deutsche Post"></i></p>
+                                    <p>
+                                      <i aria-hidden="true" class="icon--dhl" alt="DHL"></i><br />
+                                      <i aria-hidden="true" class="icon--deutsche-post" alt="Deutsche Post"></i>
+                                    </p>
                             </div>
                         </div>
 
