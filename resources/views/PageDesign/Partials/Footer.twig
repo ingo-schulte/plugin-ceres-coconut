@@ -91,9 +91,8 @@
     
     
     
-    <div class="widget widget-fw widget-copyright">
-            <div class="copyright text-center my-3">
-            <div class="static-link-list">
+    <div class="widget widget-fw legal-information">
+            <div class="widget-legal-information text-center my-3">
                 {% autoescape false %}
                     <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
                     {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
@@ -109,7 +108,7 @@
                     {% endif %}
                 {% endautoescape %}
             </div>
-        </div>
-</div>
+         </div>
+      </div>
 
 </footer>
