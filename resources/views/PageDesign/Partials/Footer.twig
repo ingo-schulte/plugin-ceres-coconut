@@ -1,6 +1,6 @@
 {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
 
-<footer class="bg-dark">
+<footer class="bg-dark py-5">
     <div class="container-max">
         <div class="row">
             <div class="col-md-12">
@@ -64,7 +64,7 @@
                                  </ul>
                             </div>
                         </div>
-                      
+
                     </div>  
             </div>
 
@@ -72,27 +72,10 @@
     </div>
     
     
-    <div class="container-max">
-        <div class="row">
-                <div class="accordion w-100 d-lg-flex" id="accordion">
-                            <a href="#five" data-toggle="collapse" class="card-header collapsed h5 text-uppercase text-white nav-link p-0 d-block d-lg-none d-xl-none">Zahlungsarten</a>
-                            <div class="collapse text-white d-lg-flex" id="five" data-parent="#accordion">
-                                <ul class="list-unstyled">
-                                    <li><i aria-hidden="true" class="icon--paypal" alt="PayPal"></i></li>
-                                    <li><i aria-hidden="true" class="icon--vorkasse" alt="Vorkasse (Überweisung)"></i></li>
-                                 </ul>
-                             </div>
-                 </div>
-           </div>
-      </div>
     
-
-  
-    
-    
-    
-    <div class="widget widget-fw legal-information">
-            <div class="widget-legal-information text-center my-3">
+    <div class="widget widget-fw widget-copyright">
+            <div class="copyright text-center my-3">
+            <div class="static-link-list">
                 {% autoescape false %}
                     <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
                     {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
@@ -108,21 +91,23 @@
                     {% endif %}
                 {% endautoescape %}
             </div>
-         </div>
-      </div>
-      
-      
-      
-      
-          <div class="widget widget-fw vat-info--text">
-            <div class="widget-vat-info--text text-center my-3">
-                {% autoescape false %}
-                    <p class="vat-info--text"> * Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl. <a title="Versandkosten" href="/versandkosten">Versandkosten</a>. </p>
-                {% endautoescape %}
-            </div>
-         </div>
-      </div>
+        </div>
+</div>
 
 
 
+<div class="widget widget-fw widget-copyright">
+            <div class="copyright text-center my-3">
+            <a rel="nofollow" href="https://www.plentymarkets.eu">
+                <img alt="Plentymarkets GmbH Logo" class="svg plenty-brand" src="{{ plugin_path('Ceres') }}/images/plentymarkets-logo.svg" rel="nofollow">
+            </a>
+            <br>
+            <small>&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
+        </div>
+</div>    
+    
+    
+    
+    
+    
 </footer>
