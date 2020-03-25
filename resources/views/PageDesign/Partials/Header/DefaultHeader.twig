@@ -7,8 +7,12 @@
     <div class="container-max">
         <div class="row mx-0">
             <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
-                <a class="navbar-brand" href="{{ homepageURL }}" title="Werkzeughandel Schulte - zur Startseite wechseln">
-                    <i class="icon--logo"><span class="path1"></span><span class="path2"></span></i>
+                <a class="navbar-brand" href="{{ homepageURL }}">
+                    {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
+                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" />
+                    {% else %}
+                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" />
+                    {% endif %}
                 </a>
             </div>
                 <ul id="controlsList" class="controls-list list-inline">
